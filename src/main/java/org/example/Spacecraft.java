@@ -58,6 +58,23 @@ public class Spacecraft {
         if (direction == 'N' || direction == 'S') direction = 'D';
     }
 
+    // function to execute a single command with given direction
+    private void executeSingleCommand(char command) {
+        if (command == 'f') {
+            moveForward();
+        } else if (command == 'b') {
+            moveBackward();
+        } else if (command == 'l') {
+            turnLeft();
+        } else if (command == 'r') {
+            turnRight();
+        } else if (command == 'u') {
+            turnUp();
+        } else if (command == 'd') {
+            turnDown();
+        }
+    }
+
     // function to get the current position of the spacecraft
     public String getPosition() {
         return "(" + x + ", " + y + ", " + z + ")";
