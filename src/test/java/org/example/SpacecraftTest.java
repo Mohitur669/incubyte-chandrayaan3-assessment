@@ -386,4 +386,29 @@ public class SpacecraftTest {
         assertEquals("(0, 0, 0)", spacecraft.getPosition());
         assertEquals('W', spacecraft.getDirection());
     }
+
+    // testing turning down for more directions (North, South, Down)
+    @Test
+    public void testTurnDownFromNorthDirection() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'N');
+        spacecraft.turnDown();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('D', spacecraft.getDirection());
+    }
+
+    @Test
+    public void testTurnDownFromSouthDirection() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'S');
+        spacecraft.turnDown();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('D', spacecraft.getDirection());
+    }
+
+    @Test
+    public void testTurnDownFromDownDirection() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'D');
+        spacecraft.turnDown();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('D', spacecraft.getDirection());
+    }
 }
