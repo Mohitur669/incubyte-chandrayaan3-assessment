@@ -96,4 +96,28 @@ public class SpacecraftTest {
         assertEquals("(0, 0, 0)", spacecraft.getPosition());
         assertEquals('D', spacecraft.getDirection());
     }
+
+    // testing spacecraft turning right in all directions
+    @Test
+    public void testTurnRight() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'N');
+        spacecraft.turnRight();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('E', spacecraft.getDirection());
+
+        spacecraft = new Spacecraft(0, 0, 0, 'S');
+        spacecraft.turnRight();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('W', spacecraft.getDirection());
+
+        spacecraft = new Spacecraft(0, 0, 0, 'E');
+        spacecraft.turnRight();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('S', spacecraft.getDirection());
+
+        spacecraft = new Spacecraft(0, 0, 0, 'D');
+        spacecraft.turnRight();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('D', spacecraft.getDirection());
+    }
 }
