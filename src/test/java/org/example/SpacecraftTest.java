@@ -169,4 +169,14 @@ public class SpacecraftTest {
         assertEquals("(0, 0, 0)", spacecraft.getPosition());
         assertEquals('D', spacecraft.getDirection());
     }
+
+    // testing spacecraft executing series of commands at a single time
+    @Test
+    public void testExecuteCommands() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'N');
+        char[] commands = {'f', 'r', 'u', 'b', 'l'};
+        spacecraft.executeCommands(commands);
+        assertEquals("(-1, 1, 0)", spacecraft.getPosition());
+        assertEquals('N', spacecraft.getDirection());
+    }
 }
