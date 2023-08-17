@@ -90,6 +90,13 @@ public class Spacecraft {
         return direction == 'N' || direction == 'S' || direction == 'E' || direction == 'W' || direction == 'U' || direction == 'D';
     }
 
+    // function to set the direction of the spacecraft
+    public void setDirection(char direction) {
+        if (isValidDirection(direction)) {
+            this.direction = direction;
+        }
+    }
+
 
     // function to execute a series of commands
     public void executeCommands(char[] commands) {
