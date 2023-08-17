@@ -179,4 +179,24 @@ public class SpacecraftTest {
         assertEquals("(-1, 1, 0)", spacecraft.getPosition());
         assertEquals('N', spacecraft.getDirection());
     }
+
+    // handling the case for executing empty commands
+    @Test
+    public void testExecuteEmptyCommands() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'N');
+        char[] commands = {};
+        spacecraft.executeCommands(commands);
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('N', spacecraft.getDirection());
+    }
+
+    // handling the case for executing eunknown commands
+    @Test
+    public void testExecuteUnknownCommand() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'N');
+        char[] commands = {'x', 'y', 'z'};
+        spacecraft.executeCommands(commands);
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('N', spacecraft.getDirection());
+    }
 }
