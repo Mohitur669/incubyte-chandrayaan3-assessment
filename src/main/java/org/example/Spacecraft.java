@@ -53,6 +53,11 @@ public class Spacecraft {
         if (direction == 'N' || direction == 'S') direction = 'U';
     }
 
+    // function to turn the spacecraft down
+    public void turnDown() {
+        if (direction == 'N' || direction == 'S') direction = 'D';
+    }
+
     // function to get the current position of the spacecraft
     public String getPosition() {
         return "(" + x + ", " + y + ", " + z + ")";
