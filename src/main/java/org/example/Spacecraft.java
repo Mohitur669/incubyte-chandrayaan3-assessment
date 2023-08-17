@@ -32,6 +32,14 @@ public class Spacecraft {
         else if (direction == 'D') z++;
     }
 
+    // function to turn the spacecraft left
+    public void turnLeft() {
+        if (direction == 'N') direction = 'W';
+        else if (direction == 'S') direction = 'E';
+        else if (direction == 'E') direction = 'N';
+        else if (direction == 'W') direction = 'S';
+    }
+
     // function to get the current position of the spacecraft
     public String getPosition() {
         return "(" + x + ", " + y + ", " + z + ")";
