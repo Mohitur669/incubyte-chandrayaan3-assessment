@@ -21,4 +21,14 @@ public class Spacecraft {
         else if (direction == 'U') z++;
         else if (direction == 'D') z--;
     }
+
+    // function to get the current position of the spacecraft
+    public String getPosition() {
+        return "(" + x + ", " + y + ", " + z + ")";
+    }
+
+    // function to get the current direction of the spacecraft
+    public char getDirection() {
+        return direction;
+    }
 }
