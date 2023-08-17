@@ -326,4 +326,13 @@ public class SpacecraftTest {
         assertEquals("(0, 0, 0)", spacecraft.getPosition());
         assertEquals('D', spacecraft.getDirection());
     }
+
+    // testing turning up of the spacecraft but from East direction
+    @Test
+    public void testTurnUpFromEastDirection() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'E');
+        spacecraft.turnUp();
+        assertEquals("(0, 0, 0)", spacecraft.getPosition());
+        assertEquals('E', spacecraft.getDirection());
+    }
 }
