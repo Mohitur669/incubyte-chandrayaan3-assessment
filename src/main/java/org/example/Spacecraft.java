@@ -48,6 +48,11 @@ public class Spacecraft {
         else if (direction == 'W') direction = 'N';
     }
 
+    // function to turn the spacecraft up
+    public void turnUp() {
+        if (direction == 'N' || direction == 'S') direction = 'U';
+    }
+
     // function to get the current position of the spacecraft
     public String getPosition() {
         return "(" + x + ", " + y + ", " + z + ")";
