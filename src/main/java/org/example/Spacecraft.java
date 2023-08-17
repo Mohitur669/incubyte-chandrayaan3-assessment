@@ -85,6 +85,12 @@ public class Spacecraft {
         return direction;
     }
 
+    // function to check the given direction is valid or not
+    private boolean isValidDirection(char direction) {
+        return direction == 'N' || direction == 'S' || direction == 'E' || direction == 'W' || direction == 'U' || direction == 'D';
+    }
+
+
     // function to execute a series of commands
     public void executeCommands(char[] commands) {
         for (char command : commands) {
