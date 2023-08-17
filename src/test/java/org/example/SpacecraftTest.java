@@ -249,4 +249,45 @@ public class SpacecraftTest {
         assertEquals("(0, 0, -1)", spacecraft.getPosition());
         assertEquals('D', spacecraft.getDirection());
     }
+
+    // edge cases for moving backward of the spacecraft in each direction
+    @Test
+    public void testMoveBackwardSouth() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'S');
+        spacecraft.moveBackward();
+        assertEquals("(0, 1, 0)", spacecraft.getPosition());
+        assertEquals('S', spacecraft.getDirection());
+    }
+
+    @Test
+    public void testMoveBackwardEast() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'E');
+        spacecraft.moveBackward();
+        assertEquals("(-1, 0, 0)", spacecraft.getPosition());
+        assertEquals('E', spacecraft.getDirection());
+    }
+
+    @Test
+    public void testMoveBackwardWest() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'W');
+        spacecraft.moveBackward();
+        assertEquals("(1, 0, 0)", spacecraft.getPosition());
+        assertEquals('W', spacecraft.getDirection());
+    }
+
+    @Test
+    public void testMoveBackwardUp() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'U');
+        spacecraft.moveBackward();
+        assertEquals("(0, 0, -1)", spacecraft.getPosition());
+        assertEquals('U', spacecraft.getDirection());
+    }
+
+    @Test
+    public void testMoveBackwardDown() {
+        Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'D');
+        spacecraft.moveBackward();
+        assertEquals("(0, 0, 1)", spacecraft.getPosition());
+        assertEquals('D', spacecraft.getDirection());
+    }
 }
