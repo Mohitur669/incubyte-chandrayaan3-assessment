@@ -290,4 +290,13 @@ public class SpacecraftTest {
         assertEquals("(0, 0, 1)", spacecraft.getPosition());
         assertEquals('D', spacecraft.getDirection());
     }
+
+    // testing moving forward of the spacecraft but in a different starting position than (0, 0, 0)
+    @Test
+    public void testMoveForwardWithDifferentStartingPosition() {
+        Spacecraft spacecraft = new Spacecraft(2, -3, 1, 'N');
+        spacecraft.moveForward();
+        assertEquals("(2, -2, 1)", spacecraft.getPosition());
+        assertEquals('N', spacecraft.getDirection());
+    }
 }
