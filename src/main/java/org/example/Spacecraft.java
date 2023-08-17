@@ -12,7 +12,7 @@ public class Spacecraft {
         this.direction = direction;
     }
 
-    // function to move the spacecraft in forward
+    // function to move the spacecraft in forward direction
     public void moveForward() {
         if (direction == 'N') y++;
         else if (direction == 'S') y--;
@@ -20,6 +20,16 @@ public class Spacecraft {
         else if (direction == 'W') x--;
         else if (direction == 'U') z++;
         else if (direction == 'D') z--;
+    }
+
+    // function to move the spacecraft in backward direction
+    public void moveBackward() {
+        if (direction == 'N') y--;
+        else if (direction == 'S') y++;
+        else if (direction == 'E') x--;
+        else if (direction == 'W') x++;
+        else if (direction == 'U') z--;
+        else if (direction == 'D') z++;
     }
 
     // function to get the current position of the spacecraft

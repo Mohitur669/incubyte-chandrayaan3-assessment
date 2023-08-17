@@ -4,6 +4,7 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SpacecraftTest {
+    // testing moving forward in all directions
     @Test
     public void testMoveForward() {
         Spacecraft spacecraft = new Spacecraft(0, 0, 0, 'N');
