@@ -84,4 +84,20 @@ public class Spacecraft {
     public char getDirection() {
         return direction;
     }
+
+    // function to execute a series of commands
+    public void executeCommands(char[] commands) {
+        for (char command : commands) {
+            if (isValidCommand(command)) {
+                executeSingleCommand(command);
+            } else {
+                System.out.println("Invalid command: " + command);
+            }
+        }
+    }
+
+    // function to check if the command is valid
+    private boolean isValidCommand(char command) {
+        return command == 'f' || command == 'b' || command == 'l' || command == 'r' || command == 'u' || command == 'd';
+    }
 }
